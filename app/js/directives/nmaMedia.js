@@ -88,7 +88,9 @@ angular.module('nma.directives').
         $scope.set = function(index) {
           currentIndex = index;
           $scope.currentMediaItem = $scope.media[currentIndex];
-          $scope.currentMediaDescription = metadata($scope.currentMediaItem.metadata);
+          metadata($scope.currentMediaItem.metadata).then(function(description) {
+            $scope.currentMediaDescription = description;
+          });
         };
         $scope.next = function() {
           if ($scope.hasNext()) {

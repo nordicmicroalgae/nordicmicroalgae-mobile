@@ -33,11 +33,22 @@ angular.module('nma').
       Taxon.get({taxonName: $routeParams.taxonName}, function(taxon) {
         $scope.taxon = taxon;
         $scope.media = taxon.media;
-        $scope.facts = facts(taxon.rank, {
-          'Facts': taxon.facts || {},
-          'External Facts': taxon.external_facts || {}
-        });
-        $scope.biovolumes = biovolumes(taxon.facts_peg);
+
+        if (taxon.facts || taxon.external_facts) {
+          facts(taxon.rank, {
+            'Facts': taxon.facts || {},
+            'External Facts': taxon.external_facts || {}
+          }).
+          then(function(data) {
+            $scope.facts = data;
+          });
+        }
+
+        if (taxon.facts_peg) {
+          biovolumes(taxon.facts_peg).then(function(data) {
+            $scope.biovolumes = data;
+          });
+        }
       });
     }
   ]);

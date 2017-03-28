@@ -446,7 +446,12 @@ a.media-frame-show-details:hover {
   background: #f5f5f5;
 }
 
-.table.table-biovolumes th, 
+.table.table-biovolumes th,
 .table.table-biovolumes td {
   border: 1px solid #dddddd;
+}
+
+/* Taxon details tabs */
+.taxon-details .nav-tabs a {
+  cursor: pointer;
 }

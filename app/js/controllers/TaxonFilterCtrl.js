@@ -30,7 +30,9 @@
 angular.module('nma').
   controller('TaxonFilterCtrl', ['$scope', 'Filter', 'Query',
     function TaxonFilterCtrl($scope, Filter, Query) {
-      $scope.filters = Filter.get();
+      Filter.get().then(function(filters) {
+        $scope.filters = filters;
+      });
 
       $scope.apply = function() {
         Filter.save().then(updateQuery);

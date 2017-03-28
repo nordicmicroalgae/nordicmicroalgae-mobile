@@ -48,7 +48,7 @@ angular.module('nma.directives').
           '<tbody>' +
             '<tr ng-repeat="row in data.sizeClasses">' +
               '<th>{{row.label}}</th>' +
-              '<td ng-repeat="value in row.values">{{value}}</td>' +
+              '<td ng-repeat="value in row.values track by $index">{{value}}</td>' +
             '</tr>' +
           '</tbody>' +
         '</table>' +

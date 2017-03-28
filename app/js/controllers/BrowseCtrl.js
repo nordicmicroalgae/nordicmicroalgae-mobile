@@ -33,7 +33,9 @@ angular.module('nma').
       $scope.query = 'query' in $routeParams ? $routeParams.query : '';
       $scope.group = 'group' in $routeParams ? $routeParams.group : '';
 
-      $scope.groups = group;
+      group.then(function(groups) {
+        $scope.groups = groups;
+      });
 
       $scope.isActiveGroup = function(groupName) {
         return groupName === $scope.group;

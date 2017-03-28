@@ -81,6 +81,7 @@ module.exports = function(grunt) {
               'app/lib/jquery.min.js',
               'app/lib/bootstrap/js/bootstrap.min.js',
               'app/lib/angular/angular.min.js',
+              'app/lib/angular/angular-route.min.js',
               'app/lib/angular/angular-resource.min.js',
               'app/lib/angular/angular-sanitize.min.js'
             ]

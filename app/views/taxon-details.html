@@ -36,13 +36,13 @@
 
     <ul class="nav nav-tabs" ng-show="media.length||biovolumes">
       <li ng-show="media" ng-class="{active:media.length}">
-        <a href="#taxon-media" data-toggle="tab">Images</a>
+        <a data-target="#taxon-media" data-toggle="tab">Images</a>
       </li>
       <li ng-class="{active:!media.length}">
-        <a href="#taxon-info" data-toggle="tab">Details</a>
+        <a data-target="#taxon-info" data-toggle="tab">Details</a>
       </li>
       <li ng-show="biovolumes">
-        <a href="#biovolumes" data-toggle="tab">Biovolumes</a>
+        <a data-target="#biovolumes" data-toggle="tab">Biovolumes</a>
       </li>
     </ul>
 

@@ -31,7 +31,7 @@ angular.module('nma.services', ['ngResource']);
 angular.module('nma.directives', ['ngSanitize']);
 angular.module('nma.filters', []);
 
-angular.module('nma', ['nma.services', 'nma.directives', 'nma.filters']).
+angular.module('nma', ['ngRoute', 'nma.services', 'nma.directives', 'nma.filters']).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.
       when('/', {
