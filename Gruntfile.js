@@ -148,6 +148,24 @@ module.exports = function(grunt) {
       }
     },
 
+    htmlmin: {
+      options: {
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyJS: true
+      },
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: 'dist',
+            src: '**/*.html',
+            dest: 'dist'
+          }
+        ]
+      }
+    },
+
     uglify: {
       dist: {
         files: [
@@ -173,7 +191,7 @@ module.exports = function(grunt) {
 
   // Alias tasks
   grunt.registerTask('server', ['connect:server']);
-  grunt.registerTask('build', ['clean', 'copy', 'concat', 'cssmin', 'uglify', 'updatehtml']);
+  grunt.registerTask('build', ['clean', 'copy', 'concat', 'cssmin', 'uglify', 'updatehtml', 'htmlmin']);
   grunt.registerTask('default', ['jshint', 'build']);
 
   // Custom tasks
@@ -202,6 +220,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-connect');
