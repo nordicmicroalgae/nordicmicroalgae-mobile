@@ -83,7 +83,8 @@ module.exports = function(grunt) {
               'app/lib/angular/angular.min.js',
               'app/lib/angular/angular-route.min.js',
               'app/lib/angular/angular-resource.min.js',
-              'app/lib/angular/angular-sanitize.min.js'
+              'app/lib/angular/angular-sanitize.min.js',
+              'app/lib/angular/angular-touch.min.js'
             ]
           },
           {
