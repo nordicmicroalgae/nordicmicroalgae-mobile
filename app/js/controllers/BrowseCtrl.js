@@ -1,8 +1,7 @@
 /*
  Nordic Microalgae Mobile. http://m.nordicmicroalgae.org
 
- Author: Andreas Loo, info@andreasloo.se
- Copyright (c) 2013 SMHI, Swedish Meteorological and Hydrological Institute
+ Copyright (c) 2013-2017 SMHI, Swedish Meteorological and Hydrological Institute
  License: MIT License as follows:
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
